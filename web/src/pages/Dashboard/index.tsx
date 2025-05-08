@@ -1,12 +1,10 @@
 import { Container } from "@mui/material";
-import Cabecalho from "../../components/Cabecalho";
 import Titulo from "../../components/Titulo";
 import Botao from "../../components/Botao";
 import Tabela from "../../components/Tabela";
 import Subtitulo from "../../components/Subtitulo";
 import Grafico from "../../components/Grafico";
 import Avaliacao from "../../components/Avaliacao";
-import Rodape from "../../components/Rodape";
 import useDadosConsulta from "../../useDadosConsulta";
 import useDadosProfissional from "../../useDadosProfissional";
 
