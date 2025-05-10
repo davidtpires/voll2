@@ -53,8 +53,8 @@ export default function Login() {
         <Imagem src={logo} alt="Logo da Voll" />
         <Titulo>Faça login em sua conta</Titulo>
         <Formulario>
-            <CampoDigitacao tipo="email" labelx="Email" valor={email} placeholder="Insira seu endereço de email" onChange={setEmail} />
-            <CampoDigitacao tipo="password" labelx="Senha" valor={senha} placeholder="Insira sua senha" onChange={setSenha} />
+            <CampoDigitacao tipo="email" label="Email" valor={email} placeholder="Insira seu endereço de email" onChange={setEmail} />
+            <CampoDigitacao tipo="password" label="Senha" valor={senha} placeholder="Insira sua senha" onChange={setSenha} />
             <BotaoCustomizado type="submit">Entrar</BotaoCustomizado>
         </Formulario>
         <Paragrafo>Esqueceu sua senha?</Paragrafo>

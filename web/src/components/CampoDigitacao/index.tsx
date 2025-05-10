@@ -28,13 +28,13 @@ interface Props {
     tipo: string,
     placeholder: string,
     onChange: (value: string) => void,
-    labelx?: string
+    label?: string
 }
 
-function CampoDigitacao({ valor, tipo , placeholder, onChange, labelx } : Props) {
+function CampoDigitacao({ valor, tipo , placeholder, onChange, label } : Props) {
   return (
     <Container>
-        <Rotulo>{labelx}</Rotulo>
+        <Rotulo>{label}</Rotulo>
         <Campo
             type={tipo}
             value={valor}
