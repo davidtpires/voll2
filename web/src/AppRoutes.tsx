@@ -4,6 +4,7 @@ import PaginaBase from "./pages/PaginaBase";
 import PaginaInicial from "./pages/PaginaInicial";
 import PaginaBaseFormulario from "./pages/PaginaBaseFormulario";
 import Login from "./pages/Login";
+import Cadastro from "./pages/Cadastro";
 
 function AppRoutes() {
     return (
@@ -15,6 +16,7 @@ function AppRoutes() {
             </Route>
             <Route path="/" element={<PaginaBaseFormulario />}>
                 <Route path="/login" element={<Login />} />
+                <Route path="/cadastro" element={<Cadastro />} />
             </Route>
         </Routes>
         </BrowserRouter>
