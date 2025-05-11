@@ -4,6 +4,7 @@ import { Step, StepLabel, Stepper } from "@mui/material";
 import { useState } from 'react';
 import Botao from "../../components/Botao";
 import CampoDigitacao from "../../components/CampoDigitacao";
+import IClinica from "../../types/IClinica";
 
 const Imagem = styled.img`
   padding: 2em 0;
@@ -65,6 +66,19 @@ export default function Cadastro() {
 
 
         setEtapaAtiva(etapaAtiva + 1); // atualiza o estado da etapa para a próxima etapa
+
+        const clinica: IClinica = {
+            email: email,
+            nome: nome,
+            senha: senha,
+            endereco: {
+                cep: cep,
+                rua: rua,
+                numero: numero,
+                complemento: complemento,
+                estado: estado
+            }
+        }
     }
 
 
