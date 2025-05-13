@@ -7,20 +7,32 @@ import Grafico from "../../components/Grafico";
 import Avaliacao from "../../components/Avaliacao";
 import useDadosConsulta from "../../useDadosConsulta";
 import useDadosProfissional from "../../useDadosProfissional";
+import ModalCadastro from "./Modal";
+import { useState } from "react";
 
 function Dashboard() {
   const { dados: consultas, erro: consultasErro } = useDadosConsulta();
   const { dados: profissionais, erro: profissionaisErro } = useDadosProfissional();
+  const [open, setOpen] = useState(false);
 
   if (consultasErro || profissionaisErro) {
     console.log("Ocorreu um erro na requisição");
+  }
+
+  const handleOpen = () => {
+    setOpen(true);
+  }
+
+  const handleClose = () => {
+    setOpen(false);
   }
 
   return (
     <>
       <Container>
         <Titulo>Área Administrativa</Titulo>
-        <Botao>Cadastrar especialista</Botao>
+        <Botao onClick={() => handleOpen() }>Cadastrar especialista</Botao>
+        <ModalCadastro open={open} handleClose={handleClose} />
         <Titulo imagem="consulta">Consultas do Dia</Titulo>
         <Tabela consultas={consultas} />
         <Titulo imagem="grafico">Consultas mensais por especialista</Titulo>
