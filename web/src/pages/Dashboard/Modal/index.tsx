@@ -86,6 +86,8 @@ export default function ModalCadastro({ open, handleClose }: { open: boolean, ha
             possuiPlanoSaude: possuiPlano,
             estaAtivo: true,
             imagem: imagem,
+            senha: senha,
+            planoSaude: planosSelecionados,
             email: email,
             telefone: telefone,
             endereco: {
@@ -110,7 +112,7 @@ export default function ModalCadastro({ open, handleClose }: { open: boolean, ha
             >
                 <BoxCustomizado>
                     <Titulo>Cadastre o especialista inserindo os dados abaixo:</Titulo>
-                    <form>
+                    <form onSubmit={handleSubmit}>
                         <Container>
                             <CampoDigitacao tipo="text" label="Nome" valor={nome} placeholder="Digite seu nome completo" onChange={setNome} />
                             <CampoDigitacao tipo="email" label="Email" valor={email} placeholder="Digite seu email" onChange={setEmail} />
